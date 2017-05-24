@@ -1,7 +1,7 @@
 # TSR302HardKeyHelper
 Simpl# Pro Class to translate TSR-302 hard key numbers into names
 
-Sample Usage
+Sample Usage:
 ```
 private void ui_SigChange(BasicTriList currentDevice, SigEventArgs args)
 {
