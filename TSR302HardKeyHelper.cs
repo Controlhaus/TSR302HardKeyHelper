@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Crestron.SimplSharp;
 
-namespace ConverterRoomAV3Program1
+namespace MyNamespace
 {
     public class TSR302HardKeyHelper
     {
