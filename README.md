@@ -7,9 +7,9 @@ private void ui_SigChange(BasicTriList currentDevice, SigEventArgs args)
 {
     if (args.Sig.Type == eSigType.Bool)
     {                    
-        string hardKeyName;
-        if (hardKeyHelper.hardKeys.TryGetValue(args.Sig.Number, out hardKeyName))
+        if (TSR302HardKeyHelper.IsDefined((TSR302HardKeyHelper.HardKeys)args.Sig.Number))
         {
+            string hardKeyName = ((TSR302HardKeyHelper.HardKeys)args.Sig.Number).ToString();            
             switch (hardKeyName)
             {
                 case "volumeUp":
