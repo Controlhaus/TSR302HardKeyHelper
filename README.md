@@ -9,10 +9,9 @@ private void ui_SigChange(BasicTriList currentDevice, SigEventArgs args)
     {                    
         if (TSR302HardKeyHelper.IsDefined((TSR302HardKeyHelper.HardKeys)args.Sig.Number))
         {
-            string hardKeyName = ((TSR302HardKeyHelper.HardKeys)args.Sig.Number).ToString();            
-            switch (hardKeyName)
+            switch (args.Sig.Number)
             {
-                case "volumeUp":
+                case (uint)TSR302HardKeyHelper.HardKeys.volumeUp:
                     if (args.Sig.BoolValue)
                     {
                         //Start volume up ramp
@@ -21,6 +20,8 @@ private void ui_SigChange(BasicTriList currentDevice, SigEventArgs args)
                     {
                       //Stop volume ramp
                     }
+                    break;
+                case (uint)TSR302HardKeyHelper.HardKeys.volumeDown:
                     break;
             }
         }
